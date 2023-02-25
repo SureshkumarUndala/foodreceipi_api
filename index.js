@@ -22,6 +22,7 @@ app.use(bodyParser.json())
 
 
 mongoose.connect("mongodb+srv://suresh:ivQvrCsLoZEDeeLN@cluster0.s4bg01a.mongodb.net/?retryWrites=true&w=majority")
+.then(()=>console.log("Db connected"))
 
 app.use(Authentication)
 app.use(PostAndGetRoute)
