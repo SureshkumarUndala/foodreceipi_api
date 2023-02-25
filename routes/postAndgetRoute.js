@@ -43,6 +43,7 @@ router.get("/allposts", middleware, async (req, res) => {
         let allposts = await PostModel.find({userref:userref})
         res.json({
             status:"success",
+            username:exist.email,
             allposts})
     } catch (err) {
         console.log(err);
